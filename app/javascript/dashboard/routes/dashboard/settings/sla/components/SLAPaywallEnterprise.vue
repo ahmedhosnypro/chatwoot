@@ -4,11 +4,11 @@ import BaseEmptyState from './BaseEmptyState.vue';
 const props = defineProps({
   isSuperAdmin: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   isOnChatwootCloud: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 });
 

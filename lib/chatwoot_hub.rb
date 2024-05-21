@@ -21,7 +21,7 @@ class ChatwootHub
   end
 
   def self.pricing_plan_quantity
-    1
+    20
   end
 
   def self.support_config
