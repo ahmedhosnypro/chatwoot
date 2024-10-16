@@ -23,6 +23,24 @@ By default, it renders:
 
     <%= vite_client_tag %>
     <%= vite_javascript_tag 'portal' %>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://support.safwauniversity.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'VfbXdNJWwvuvohTR3eKkhG73',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+
     <style>
       #appearance-dropdown[data-current-theme="system"] .check-mark-icon.light-theme,
       #appearance-dropdown[data-current-theme="system"] .check-mark-icon.dark-theme,
@@ -57,7 +75,7 @@ By default, it renders:
       }
     </script>
   </head>
-  <body>
+  <body style="direction: rtl">
     <div id="portal" class="antialiased">
       <main class="flex flex-col min-h-screen bg-white main-content dark:bg-slate-900" role="main">
         <% if !@is_plain_layout_enabled %>
